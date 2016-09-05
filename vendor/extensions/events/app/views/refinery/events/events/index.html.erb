@@ -1,11 +1,37 @@
 <% content_for :body do %>
-  <ul id="events">
-    <% @events.each do |event| %>
-      <li>
-        <%= link_to event.title, refinery.events_event_path(event) %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>
+        Upcoming Events
+      </h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <%- @events.each do |event| %>
+      <%= render partial: 'event', locals: { event: event } %>
+    <%- end %>
+  </div>
+
+  <%- if @past_events.size > 0 %>
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>
+          Past Events
+        </h4>
+      </div>
+    </div>
+    
+    <div class="row">
+      <%- @past_events.each do |event| %>
+        <%= render partial: 'event', locals: { event: event } %>
+      <%- end %>
+    </div>
+  <%- end %>
+
+
 <% end %>
+
+
 
 <%= render '/refinery/content_page' %>

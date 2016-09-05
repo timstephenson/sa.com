@@ -1,0 +1,9 @@
+<%- active = current_page?( refinery.events_event_path(event) ) ? "active" : "" %>
+<%= link_to refinery.events_event_path(event), class: "list-group-item #{ active }" do %>
+  <h4 class="mb0">
+    <%= event.title %>
+  </h4>
+  <p>
+    <%= event.date.strftime( "%A, %B %e at %l:%M%P" ) %>
+  </p>
+<%- end %>

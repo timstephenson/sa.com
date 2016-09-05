@@ -9,8 +9,13 @@
   </div>
 
   <div class='field'>
+    <%= f.label :group -%>
+    <%= f.text_field :group, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
     <%= f.label :date -%>
-    <%= f.datetime_select :date -%>
+    <%= f.datetime_select :date, ampm: true -%>
   </div>
 
   <div class='field'>
@@ -25,7 +30,7 @@
   <div class='field'>
     <%= render '/refinery/admin/wysiwyg',
                 :f => f,
-                :fields => [:description, :location],
+                :fields => [:description, :short_description, :location],
                 :object => "events/event" -%>
   </div>
 

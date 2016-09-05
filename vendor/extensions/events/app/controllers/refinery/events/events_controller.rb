@@ -22,7 +22,8 @@ module Refinery
     protected
 
       def find_all_events
-        @events = Event.order('position ASC')
+        @events = Event.where(['date >= ?', DateTime.now.beginning_of_day]).order('date ASC')
+        @past_events = Event.where(['date < ?', DateTime.now.beginning_of_day]).order('date DESC').limit(12)
       end
 
       def find_page

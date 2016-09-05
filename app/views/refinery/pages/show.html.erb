@@ -1,0 +1,18 @@
+<div class="row">
+
+  <div class="col-sm-8 col-md-9 mb15">
+    <%= render '/refinery/content_page' %>
+  </div>
+
+  <div class="col-sm-4 col-md-3">
+    <aside>
+      <h4>Upcoming Events</h4>
+      <div class="list-group" id="events">
+        <% @events.each do |event| %>
+          <%= render partial: "refinery/events/events/event_short", locals: { event: event } %>
+        <% end %>
+      </div>
+    </aside>
+  </div>
+
+</div>

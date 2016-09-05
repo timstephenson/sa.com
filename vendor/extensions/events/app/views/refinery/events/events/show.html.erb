@@ -1,51 +1,66 @@
 <% content_for :body_content_title do %>
-  <%= @event.title %>
+  <%=raw @event.title  %>
 <% end %>
 
 <% content_for :body do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @event.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Date</h1>
-    <p>
-      <%=raw @event.date %>
-    </p>
-  </section>
-  <section>
-    <h1>Photo</h1>
-    <p>
-      <%= image_fu @event.photo, nil %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @event.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Location</h1>
-    <p>
-      <%=raw @event.location %>
-    </p>
-  </section>
-<% end %>
+  <div class="row">
+    <div class="col-sm-8 col-md-9 mb15">
 
-<% content_for :side_body do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="events">
-      <% @events.each do |event| %>
-        <li>
-          <%= link_to event.title, refinery.events_event_path(event) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
+      <%- if @event.photo %>
+        <%= image_tag @event.photo.url, class: "img-rounded img-responsive mb15" %>
+      <%- end %>
+
+      <h1>
+        <%=raw @event.title  %>
+      </h1>
+
+      <h3>
+        <%=raw @event.group  %>
+      </h3>
+
+      <p>
+        <%=raw @event.description %>
+      </p>
+
+      <div class="row">
+        <div class="col-xs-2">
+          <p class="text-muted text-align-right">When:</p>
+        </div>
+        <div class="col-xs-10 col-sm-9">
+          <%= @event.date.strftime( "%A, %B %e at %l:%M%P" ) %>
+        </div>              
+      </div>
+
+      <div class="row">
+        <div class="col-xs-2">
+          <p class="text-muted text-align-right">Where:</p>
+        </div>
+        <div class="col-xs-10">
+          <%=raw @event.location %>
+        </div>              
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-3">
+      <aside>
+        <h4>Upcoming Events</h4>
+        <div class="list-group" id="events">
+          <% @events.each do |event| %>
+            <%= render partial: "event_short", locals: { event: event } %>
+          <% end %>
+        </div>
+
+        <%- if @past_events.size > 0 %>
+          <h4>Past Events</h4>
+          <div class="list-group" id="past-events">
+            <% @past_events.each do |event| %>
+              <%= render partial: "event_short", locals: { event: event } %>
+            <% end %>
+          </div>
+        <%- end %>
+      </aside>
+    </div>
+  </div>
+
 <% end %>
 
 <%= render '/refinery/content_page' %>
