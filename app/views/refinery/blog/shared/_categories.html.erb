@@ -1,0 +1,13 @@
+<% if @categories.any? %>
+  <h3><%= t('.title') %></h3>
+  <div class="list-group" id='categories'>
+    <% @categories.each do |category| %>
+      <%- active = current_page?( refinery.blog_category_path(category) ) ? "active" : "" %>
+      <%= link_to refinery.blog_category_path(category), class: "list-group-item #{ active }" do %>
+        <%= "#{category.title} (#{category.post_count})" %>
+      <%- end %>
+    <% end %>
+  </div>
+<% end %>
+
+

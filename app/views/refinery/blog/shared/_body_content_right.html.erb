@@ -1,0 +1,11 @@
+
+<%= yield(:side_body_prepend) %>
+<%= render "/refinery/blog/shared/posts" %>
+<%= render "/refinery/blog/shared/categories" %>
+<div class="well well-sm">
+  <%= render "/refinery/blog/shared/rss_feed" %>
+  <%= render "/refinery/blog/shared/tags" %>
+</div>
+<%= blog_archive_widget %>
+<%= yield(:side_body_append) %>
+

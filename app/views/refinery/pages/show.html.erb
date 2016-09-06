@@ -1,11 +1,17 @@
 <div class="row">
 
   <div class="col-sm-8 col-md-9 mb15">
-    <%= render '/refinery/content_page' %>
+    <%=raw @page.content_for(:body) %>
   </div>
 
   <div class="col-sm-4 col-md-3">
     <aside>
+      <%- unless @page.content_for(:side_body).blank? %>
+        <div class="well well-sm">
+          <%=raw @page.content_for(:side_body) %>
+        </div>
+      <%- end %>
+
       <h4>Upcoming Events</h4>
       <div class="list-group" id="events">
         <% @events.each do |event| %>
