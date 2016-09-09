@@ -2,5 +2,24 @@
   display: none;
 }
 .instructor:nth-child(3n+1){
-  clear:left
+  clear: left;
+}
+
+@media (min-width: $screen-sm-min) {
+  .instructor:nth-child(3n+1){
+    clear: left;
+  }
+  .instructor:nth-child(4n+1){
+    clear: none;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) { 
+  .instructor:nth-child(3n+1){
+    clear: none;
+  }
+  .instructor:nth-child(4n+1){
+    clear: left;
+  }
 }
