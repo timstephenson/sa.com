@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: 建立新的 Instructor
+            reorder: 对 Instructors 重新排序
+            reorder_done: 对 Instructors 的重新排序结束
+          records:
+            title: Instructors
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Instructors yet. Click "Add New Instructor" to add your first instructor.
+            no_items_yet: 目前没有 Instructors . 点击 "Add New Instructor" 创建一个instructor.
+          instructor:
+            view_live_html: 查看 instructor 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 instructor
+            delete: 永久删除 instructor
+      instructors:
+        show:
+          other: 其他 Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

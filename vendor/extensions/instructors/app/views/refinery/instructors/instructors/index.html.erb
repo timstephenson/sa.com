@@ -3,35 +3,34 @@
   <div class="row">
     <div class="col-xs-12">
       <h4>
-        Upcoming Events
+        Current Instructors
       </h4>
     </div>
   </div>
 
   <div class="row">
-    <%- @events.each do |event| %>
-      <%= render partial: 'event', locals: { event: event } %>
+    <% @instructors.each do |instructor| %>
+      <%= render partial: 'instructor', locals: { instructor: instructor } %>
     <%- end %>
   </div>
 
-  <%- if @past_events.size > 0 %>
+  <%- if @past_instructors.size > 0 %>
     <div class="row">
       <div class="col-xs-12">
         <h4>
-          Past Events
+          Past Instructors
         </h4>
       </div>
     </div>
     
     <div class="row">
-      <%- @past_events.each do |event| %>
-        <%= render partial: 'event', locals: { event: event } %>
+      <% @past_instructors.each do |instructor| %>
+        <%= render partial: 'instructor', locals: { instructor: instructor } %>
       <%- end %>
     </div>
   <%- end %>
 
 <% end %>
-
 
 
 <%= render '/refinery/content_page' %>

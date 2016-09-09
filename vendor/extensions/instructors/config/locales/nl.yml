@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Nieuwe Instructor toevoegen
+            reorder: De volgorde van de Instructors wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Instructor-volgorde
+          records:
+            title: Instructors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Instructors. Druk op 'Nieuwe Instructor toevoegen' om de eerste toe te voegen.
+          instructor:
+            view_live_html: Deze instructor op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze instructor
+            delete: Deze instructor definitief verwijderen
+      instructors:
+        show:
+          other: Andere Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

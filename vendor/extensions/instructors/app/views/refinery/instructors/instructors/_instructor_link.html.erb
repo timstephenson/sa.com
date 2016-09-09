@@ -1,0 +1,4 @@
+<%- active = current_page?( refinery.instructors_instructor_path(instructor) ) ? "active" : "" %>
+<%= link_to refinery.instructors_instructor_path(instructor), class: "list-group-item #{ active }" do %>
+  <%= instructor.full_name %>
+<%- end %>

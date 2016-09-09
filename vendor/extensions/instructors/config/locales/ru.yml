@@ -1,0 +1,31 @@
+ru:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Добавить Instructor
+            reorder: Изменить порядок Instructors
+            reorder_done: Закончить изменять порядок Instructors
+          records:
+            title: Instructors
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Instructors" не найдено. Нажмите "Добавить Instructor" чтобы создать instructor.
+          instructor:
+            view_live_html: Просмотреть instructor вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать instructor
+            delete: Удалить instructor навсегда
+      instructors:
+        show:
+          other: Другие Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

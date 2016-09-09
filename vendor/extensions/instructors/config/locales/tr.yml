@@ -1,0 +1,31 @@
+tr:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Yeni Ekle Instructor
+            reorder: Tekrar sirala Instructors
+            reorder_done: Tekrar siralama tamamlandiInstructors
+          records:
+            title: Instructors
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Instructors yok henuz.  Tikla "Yeni Ekle Instructor" eklemek senin ilk instructor.
+          instructor:
+            view_live_html: Bunu canlu instructor goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle instructor
+            delete: Bunu Sil instructor sonsuza dek
+      instructors:
+        show:
+          other: Diger Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Lag en ny Instructor
+            reorder: Endre rekkefølgen på Instructors
+            reorder_done: Ferdig å endre rekkefølgen Instructors
+          records:
+            title: Instructors
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Instructors enda. Klikk på "Lag en ny Instructor" for å legge til din første instructor.
+          instructor:
+            view_live_html: Vis hvordan denne instructor ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne instructor
+            delete: Fjern denne instructor permanent
+      instructors:
+        show:
+          other: Andre Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

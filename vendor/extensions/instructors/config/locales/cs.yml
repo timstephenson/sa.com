@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Přidat Instructor
+            reorder: Řadit Instructors
+            reorder_done: Konec řazení Instructors
+          records:
+            title: Instructors
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Instructors. Zvolte "Přidat Instructor" pro přidání prvního instructor.
+          instructor:
+            view_live_html: Zobrazit náhled instructor<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit instructor
+            delete: Smazat instructor
+      instructors:
+        show:
+          other: Další Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

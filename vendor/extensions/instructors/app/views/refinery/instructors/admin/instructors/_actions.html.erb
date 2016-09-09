@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Instructors::Admin::InstructorsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.instructors_admin_instructors_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_instructors_admin_instructor_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Instructors::Admin::InstructorsController.sortable? && ::Refinery::Instructors::Instructor.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.instructors_admin_instructors_path,
+                     t('.reorder', what:  "Instructors"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.instructors_admin_instructors_path,
+                      t('.reorder_done', what: "Instructors"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

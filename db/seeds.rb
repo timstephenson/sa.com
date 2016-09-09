@@ -14,3 +14,6 @@ Refinery::Blog::Engine.load_seed
 
 # Added by Refinery CMS Events extension
 Refinery::Events::Engine.load_seed
+
+# Added by Refinery CMS Instructors extension
+Refinery::Instructors::Engine.load_seed

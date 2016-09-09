@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Instructor
+            reorder: Réordonner les Instructors
+            reorder_done: Fin de réordonnancement des Instructors
+          records:
+            title: Instructors
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Instructor. Cliquer sur "Créer un(e) nouve(au/l/lle) Instructor" pour créer votre premi(er/ère) instructor.'
+          instructor:
+            view_live_html: Voir ce(t/tte) instructor <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) instructor
+            delete: Supprimer définitivement ce(t/tte) instructor
+      instructors:
+        show:
+          other: Autres Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort

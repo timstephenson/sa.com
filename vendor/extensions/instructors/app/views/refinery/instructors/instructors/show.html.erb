@@ -1,0 +1,47 @@
+<% content_for :body_content_title do %>
+  <%= @instructor.full_name %>
+<% end %>
+
+<% content_for :body do %>
+  <div class="row">
+    <div class="col-sm-8 col-md-9 mb15">
+
+      <h1>
+        <%= @instructor.full_name %>
+      </h1>
+
+      <%- if @instructor.photo %>
+        <%= image_tag @instructor.photo.url, class: "img-rounded img-responsive mb15" %>
+      <%- end %>
+
+      <p>
+        <%=raw @instructor.full_bio %>
+      </p>
+
+    </div>
+
+    <div class="col-sm-4 col-md-3">
+      <aside>
+        <h4>Instructors</h4>
+        <div class="list-group" id="events">
+          <% @instructors.each do |instructor| %>
+            <%= render partial: "instructor_link", locals: { instructor: instructor } %>
+          <% end %>
+        </div>
+
+        <%- if @past_instructors.size > 0 %>
+          <h4>Past Instructors</h4>
+          <div class="list-group" id="past-events">
+            <% @past_instructors.each do |instructor| %>
+              <%= render partial: "instructor_link", locals: { instructor: instructor } %>
+            <% end %>
+          </div>
+        <%- end %>
+      </aside>
+    </div>
+    
+  </div>
+
+<% end %>
+
+<%= render '/refinery/content_page' %>

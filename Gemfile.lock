@@ -20,6 +20,9 @@ PATH
     refinerycms-events (1.0)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.4)
+    refinerycms-instructors (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.4)
 
 GEM
   remote: https://rubygems.org/
@@ -321,6 +324,7 @@ DEPENDENCIES
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
   refinerycms-events!
+  refinerycms-instructors!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

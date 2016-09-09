@@ -52,3 +52,4 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 #  gem 'refinerycms-page-images', ['~> 3.0', '>= 3.0.0']
 
 gem 'refinerycms-events', path: 'vendor/extensions'
+gem 'refinerycms-instructors', path: 'vendor/extensions'

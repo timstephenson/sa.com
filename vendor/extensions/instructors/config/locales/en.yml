@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      instructors:
+        title: Instructors
+    instructors:
+      admin:
+        instructors:
+          actions:
+            create_new: Add New Instructor
+            reorder: Reorder Instructors
+            reorder_done: Done Reordering Instructors
+          records:
+            title: Instructors
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Instructors yet. Click "Add New Instructor" to add your first instructor.
+          instructor:
+            view_live_html: View this instructor live <br/><em>(opens in a new window)</em>
+            edit: Edit this instructor
+            delete: Remove this instructor forever
+      instructors:
+        show:
+          other: Other Instructors
+  activerecord:
+    attributes:
+      'refinery/instructors/instructor':
+        full_name: Full Name
+        photo: Photo
+        full_bio: Full Bio
+        short_bio: Short Bio
+        sort: Sort
