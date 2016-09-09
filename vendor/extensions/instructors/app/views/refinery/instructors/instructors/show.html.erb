@@ -5,18 +5,23 @@
 <% content_for :body do %>
   <div class="row">
     <div class="col-sm-8 col-md-9 mb15">
-
+    
       <h1>
         <%= @instructor.full_name %>
       </h1>
 
-      <%- if @instructor.photo %>
-        <%= image_tag @instructor.photo.url, class: "img-rounded img-responsive mb15" %>
-      <%- end %>
-
-      <p>
-        <%=raw @instructor.full_bio %>
-      </p>
+      <div class="row">
+        <div class="col-sm-3">
+          <%- if @instructor.photo %>
+            <%= image_tag @instructor.photo.url, class: "img-rounded img-responsive mb15" %>
+          <%- end %>
+        </div>
+        <div class="col-sm-9">
+          <p>
+            <%=raw @instructor.full_bio %>
+          </p>
+        </div>
+      </div>
 
     </div>
 
