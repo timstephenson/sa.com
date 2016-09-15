@@ -1,0 +1,38 @@
+<%= form_for [refinery, :inquiries, inquiry] do |f| %>
+  <%= render :partial => "/refinery/admin/error_messages",
+             :locals => {
+               :object => inquiry,
+               :include_object_name => true
+             } %>
+  <div class="form-group">
+    <%= f.label :name, :class => 'placeholder-fallback required' %>
+    <%= f.text_field :name, :class => 'form-control', :required => 'required',
+      :placeholder => (t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => 'placeholder-fallback required' %>
+    <%= f.email_field :email, :class => 'form-control email', :required => 'required',
+      :placeholder => (t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+  </div>
+
+  <% if Refinery::Inquiries.show_phone_number_field %>
+    <div class="form-group">
+      <%= f.label :phone, :class => 'placeholder-fallback' %>
+      <%= f.text_field :phone, :class => 'form-control phone',
+        :placeholder => (t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+    </div>
+  <% end %>
+
+  <div class='form-group message_field'>
+    <%= f.label :message, :class => 'placeholder-fallback required' %>
+    <%= f.text_area :message, :rows => 8, :required => 'required', :class => "form-control",
+      :placeholder => (t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
+  </div>
+  <div class="pull-right">
+    <%= link_to t('.privacy_policy'), "/contact-us/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
+    <div class="btn-group">
+      <%= link_to t(:cancel), "/", class: "btn btn-default", id: "cancel-link" %>
+      <%= f.submit t('.send'), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

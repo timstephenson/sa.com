@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909002351) do
+ActiveRecord::Schema.define(version: 20160915032259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -173,6 +173,18 @@ ActiveRecord::Schema.define(version: 20160909002351) do
     t.string   "image_title"
     t.string   "image_alt"
   end
+
+  create_table "refinery_inquiries_inquiries", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.boolean  "spam",       default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_inquiries_inquiries", ["id"], name: "index_refinery_inquiries_inquiries_on_id", using: :btree
 
   create_table "refinery_instructors", force: :cascade do |t|
     t.string   "full_name"

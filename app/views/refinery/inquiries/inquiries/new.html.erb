@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+    <% content_for :body do %>
+      <%= raw @page.content_for(Refinery::Pages.default_parts.first[:slug].to_sym) if Refinery::Pages.default_parts.any? %>
+
+      <div class='inquiries'>
+        <%= render "/refinery/inquiries/inquiries/form", inquiry: @inquiry %>
+      </div>
+    <% end %>
+    <%= render "/refinery/content_page" %>
+  </div>
+</div>
