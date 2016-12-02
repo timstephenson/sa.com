@@ -1,0 +1,20 @@
+#site_bar + div#page_container section#page {
+  margin-top: 15px !important;
+}
+#site_bar {
+  margin-top: 50px !important;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

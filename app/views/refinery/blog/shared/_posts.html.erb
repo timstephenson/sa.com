@@ -1,6 +1,6 @@
 <% if @posts.many? %>
   <h3><%= t('.other') %></h3>
-  <div lass="list-group" id="blog_posts">
+  <div class="list-group" id="blog_posts">
     <% @posts.each do |blog_post| %>
       <%- active = current_page?( refinery.blog_post_path(blog_post) ) ? "active" : "" %>
       <%= link_to blog_post.title, refinery.blog_post_path(blog_post), class: "list-group-item #{ active }" %>

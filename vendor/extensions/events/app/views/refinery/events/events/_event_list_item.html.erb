@@ -1,0 +1,4 @@
+<li class="text-muted">
+  <strong><%= link_to event.title, refinery.events_event_path(event) %></strong><br/>
+  <%= event.date.strftime( "%A, %B %e at %l:%M %p" ) %>
+</li>

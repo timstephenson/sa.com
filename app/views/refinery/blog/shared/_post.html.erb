@@ -20,6 +20,9 @@
       <% else %>
         <%= post.body.html_safe %>
       <% end %>
+      <p>
+        <%= link_to raw("<span class='glyphicon glyphicon-eye-open'></span> Read More"), refinery.blog_post_path(post), class: 'btn btn-primary' %>
+      </p>
     </section>
 
     <footer>
