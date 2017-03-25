@@ -29,7 +29,7 @@
       :placeholder => (t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders) %>
   </div>
   <div class="pull-right">
-    <%= link_to t('.privacy_policy'), "/book-us/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
+    <%= link_to t('.privacy_policy'), "/contact-us/privacy-policy", :id => "privacy_link" if Refinery::Inquiries.show_contact_privacy_link %>
     <div class="btn-group">
       <%= link_to t(:cancel), "/", class: "btn btn-default", id: "cancel-link" %>
       <%= f.submit t('.send'), class: "btn btn-primary" %>
