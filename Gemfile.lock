@@ -320,6 +320,7 @@ DEPENDENCIES
   fog-aws
   jbuilder (~> 2.0)
   jquery-rails
+  json (= 1.8.3)
   pg
   puma
   rails (= 4.2.6)

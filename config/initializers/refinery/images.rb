@@ -34,7 +34,7 @@ Refinery::Images.configure do |config|
   # config.s3_region = ENV['S3_REGION']
 
   # Configure Dragonfly
-  config.dragonfly_verify_urls = false
+  # config.dragonfly_verify_urls = true
   config.dragonfly_secret = "5fb224679753548386b5f19ccd0a8ad4025412b3e0ac57bf"
   # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
   # config.dragonfly_url_host = ""

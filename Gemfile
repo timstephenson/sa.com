@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'json',  '1.8.3'
 
 
 # Use Unicorn as the app server
